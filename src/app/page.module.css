@@ -1,0 +1,266 @@
+.container {
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.main {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: white;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.emoji {
+  display: inline-block;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.description {
+  font-size: 1.25rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 3rem;
+}
+
+.form {
+  margin-bottom: 2rem;
+}
+
+.inputGroup {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.input {
+  flex: 1;
+  min-width: 300px;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.95);
+  transition: all 0.3s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.button {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error {
+  padding: 1.5rem;
+  background: rgba(239, 68, 68, 0.1);
+  border: 2px solid rgba(239, 68, 68, 0.5);
+  border-radius: 12px;
+  color: white;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(10px);
+}
+
+.result {
+  background: white;
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.resultHeader {
+  border-bottom: 2px solid #f3f4f6;
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.resultHeader h2 {
+  font-size: 2rem;
+  color: #1f2937;
+  margin-bottom: 0.75rem;
+}
+
+.resultHeader .description {
+  color: #6b7280;
+  font-size: 1.1rem;
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+
+.duration {
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.section h3 {
+  font-size: 1.5rem;
+  color: #1f2937;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.section ul {
+  list-style-position: inside;
+  margin-left: 1rem;
+}
+
+.section li {
+  margin-bottom: 0.5rem;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.lessonSection {
+  background: #f9fafb;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #667eea;
+}
+
+.lessonSection h4 {
+  font-size: 1.25rem;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.timestamp {
+  color: #6b7280;
+  font-size: 0.9rem;
+  font-weight: normal;
+}
+
+.lessonSection p {
+  color: #4b5563;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.keyPoints {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.keyPoints strong {
+  color: #1f2937;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.keyPoints ul {
+  margin-left: 1.5rem;
+}
+
+.visualNotes {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #fef3c7;
+  border-radius: 8px;
+  color: #78350f;
+}
+
+.visualNotes strong {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.metadata {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 2px solid #f3f4f6;
+  text-align: center;
+}
+
+.metadata small {
+  color: #9ca3af;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .inputGroup {
+    flex-direction: column;
+  }
+
+  .input {
+    min-width: 100%;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .result {
+    padding: 1.5rem;
+  }
+
+  .resultHeader h2 {
+    font-size: 1.5rem;
+  }
+}
